@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 # --------------------------------------------------------------------
 # gpd-winmax2-acpi-wake.py
 #
@@ -28,7 +28,7 @@ def disable_device_wake(device):
 
 # --------------------------------------------------------------------
 def get_enabled_wake_devices():
-    return check_lines('cat /proc/acpi/wakeup | grep enabled | awk {\'print $1}\'')
+    return check_lines('cat /proc/acpi/wakeup | grep enabled | awk \'{print $1}\'')
 
 # --------------------------------------------------------------------
 def main():
